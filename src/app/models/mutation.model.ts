@@ -14,3 +14,17 @@ export const UPDATE_DOCUMENT = gql`
   }
 }
 `;
+
+export const SHARE_DOCUMENT = gql`
+  mutation ShareDocument($updateDocumentId: ID!, $ownerEmails: [String!]!) {
+    shareDocument(id: $updateDocumentId, ownerEmails: $ownerEmails) {
+      _id
+      owner {
+        _id
+        email
+        username
+      }
+      title
+    }
+  }
+`;

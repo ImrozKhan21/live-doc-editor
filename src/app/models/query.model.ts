@@ -11,6 +11,7 @@ export const GET_DOCUMENTS = gql`
         username
       }
       title
+      sharedWith
     }
   }
 `;
